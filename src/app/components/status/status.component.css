@@ -1,0 +1,13 @@
+.page-status{
+    background-color: #1fb650;
+    font-weight: 500;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.1);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+    margin-bottom: 70px;
+    padding: 0.75rem 1.25rem;
+}

@@ -1,0 +1,48 @@
+
+<div class="row">
+    <div class="col-6 col-md-2"></div>
+    <div class="col-6 col-md-8">
+        <div class="text-center" >
+
+          <label for="name">Nombre Receta</label>  
+          <input  id="namereceta" class="form-control mr-sm-2" type="text" value="Pasta"  placeholder="ejem. Pasta with Garlic" aria-label="Search">
+        
+          <label for="calories">Calorias</label>  
+          <ng5-slider [(value)]="value" [options]="options"></ng5-slider>
+         <p>
+          <label for="calories">Recetas</label>  
+          <select class="form-control" id="miselect" >
+          <option [value]="item" *ngFor="let item of lista">{{item}}</option>
+          </select>
+          </p>
+          <button class="btn btn-outline-success my-2 my-sm-0" (click)="onClickSearch()">Buscar</button>
+
+        </div>
+    </div>
+    <div class="col-6 col-md-2"></div>
+</div>
+<div class="row" style="height: 10px;">
+
+</div>
+<div class="row">
+  <div class="col-6 col-md-2"></div>
+  <div class="col-6 col-md-8">
+      <table class="table">
+         
+          <thead>
+            <tr>
+              <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr mdbTableCol *ngFor="let el of listR">
+              <th scope="row">{{el.id}}</th>
+              <td>{{el.title}}</td>
+              <td><img src="{{el.image}}" alt="" style="width: 200px;"></td>                
+            </tr>
+          </tbody>
+      </table>
+
+  </div>
+  <div class="col-6 col-md-2"></div>
+</div>

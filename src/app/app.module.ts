@@ -2,19 +2,34 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { BodyComponent } from './components/body/body.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { RouterModule, Routes } from '@angular/router';
+import { StatusComponent } from './components/status/status.component';
+import { StatusModule } from './components/status/status.module';
+import { MainModule } from './components/main/main.module';
+import { MainComponent } from './components/main/main/main.component';
+
+const appRoutes: Routes = [
+  {
+    path: '',
+    component: MainComponent
+  },
+  {
+    path: 'status',
+    component: StatusComponent
+  }
+
+];
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    BodyComponent,
-    FooterComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    StatusModule,
+    MainModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
